@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Lobster&family=Shadows+Into+Light&display=swap');
+
+
+*{
+    padding: auto;    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes background {
+    0%{background:linear-gradient(20deg, rgba(35, 180, 238, 0.815) 50%,rgba(43, 226, 55, 0.877) 10%);}
+    25%{background:linear-gradient(50deg, rgba(35, 180, 238, 0.815) 45%,rgba(43, 226, 55, 0.877) 25%);}
+    50%{background:linear-gradient(120deg, rgba(35, 180, 238, 0.815) 50%,rgba(43, 226, 55, 0.877) 30%);}
+    100%{background:linear-gradient(192deg, rgba(35, 180, 238, 0.815) 50%,rgba(43, 226, 55, 0.877) 50%);}
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+@keyframes vsrotate {
+    0%{font-size: 80px;}
+    50%{font-size: 90px;}
+    100%{font-size: 80px;}
 }
 
-.App-link {
-  color: #61dafb;
+
+@keyframes card3d {
+    0%{transform: rotate3d(0.5, 1, .5, 3rad);}
+    50%{transform: rotate3d(0, 1, .2, 3.13rad);}
+    100%{transform: rotate3d(0, 0, 0, 5.142rad);}
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes rotationcard {
+  0%{transform: rotate(0deg);}
+  50%{transform: rotate(-2.5deg);}
+  100%{transform: rotate(-4deg);}
+}
+.card-1{
+    background: rgba( 134, 134, 134, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 6px );
+    -webkit-backdrop-filter: blur( 6px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    margin-right: 50px ;
+    padding: 10px;
+    height: 810px;
+    animation-name: card3d;
+    animation-duration: 1s;
+    
+    transform: rotate(-2deg) ;
+
+}
+.vs{
+    z-index: 999;
+    font-family: 'Lobster', cursive;
+
+    top: 25%;
+    position: absolute;
+    font-size: 80px;
+    transform: rotate(-25deg);
+    animation-name: vsrotate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+}
+
+.card-2{
+    background: rgba(255, 0, 0, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(135, 31, 31, 0.37);
+    backdrop-filter: blur( 6px );
+    -webkit-backdrop-filter: blur( 6px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    margin-left: 50px ;
+    padding: 10px;
+    height: 810px;
+    animation-name: card3d;
+    animation-duration: 1s;
+}
+
+.img-card{
+
+    width: auto;
+    height: 500px;
+
+}
+
+.name{
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Lobster', cursive;
+}
+
+.boton{
+    margin: 10px;
+    background: rgba(255, 11, 11, 0.27);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    border: 1px solid rgba(255, 11, 11, 0.41);
+    width: auto;
+    height: auto;
+    font-size: 25px;
+}
+
+.boton:hover{
+    font-size: 27px;
 }
